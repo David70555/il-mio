@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fenice Sport e Benessere | Palestra a Napoli</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .schedule-day:hover {
+            background-color: #f3f4f6;
+        }
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigazione -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-fire text-red-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">La Fenice</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-900 hover:text-red-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#classes" class="text-gray-900 hover:text-red-600 px-3 py-2 text-sm font-medium">Corsi</a>
+                    <a href="#schedule" class="text-gray-900 hover:text-red-600 px-3 py-2 text-sm font-medium">Orari</a>
+                    <a href="#location" class="text-gray-900 hover:text-red-600 px-3 py-2 text-sm font-medium">Dove siamo</a>
+                    <a href="#contact" class="text-gray-900 hover:text-red-600 px-3 py-2 text-sm font-medium">Contatti</a>
+                    <a href="#book" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Prenota ora</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-900 hover:text-red-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sezione Hero -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Trasforma il Tuo Corpo & Mente</h1>
+                    <p class="text-xl mb-8">Centro professionale di fitness e benessere a Napoli che offre arti marziali, corsi di gruppo e allenamenti personalizzati.</p>
+                    <div class="flex space-x-4">
+                        <a href="#book" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-medium transition duration-300">Iscriviti Oggi</a>
+                        <a href="#classes" class="bg-transparent hover:bg-white hover:text-gray-900 text-white border border-white px-6 py-3 rounded-md font-medium transition duration-300">I Nostri Corsi</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative floating-button">
+                        <div class="bg-white rounded-full p-2 shadow-xl">
+                            <i class="fas fa-play text-red-600 text-4xl"></i>
+                        </div>
+                        <div class="absolute -inset-1 bg-white opacity-20 rounded-full animate-ping"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Caratteristiche -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-dumbbell text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Attrezzatura Professionale</h3>
+                    <p class="text-gray-600">Attrezzature fitness all'avanguardia per tutte le tue esigenze di allenamento.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Istruttori Esperti</h3>
+                    <p class="text-gray-600">Istruttori certificati con anni di esperienza nel fitness e nelle arti marziali.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-parking text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Parcheggio Gratuito</h3>
+                    <p class="text-gray-600">500 m² di parcheggio gratuito disponibile per tutti i nostri soci.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Corsi -->
+    <section id="classes" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">I Nostri Corsi</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Offriamo una vasta gamma di corsi di fitness e arti marziali adatti a tutti i livelli.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sanda -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md class-card transition duration-300">
+                    <div class="h-48 bg-cover bg-top" style="background-image: url('https://costansclub.altervista.org/wp-content/uploads/2024/02/sanda.webp');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Arti Marziali</span>
+                            <span class="ml-2 text-gray-500 text-sm"><i class="fas fa-clock mr-1"></i> 60 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Sanda</h3>
+                        <p class="text-gray-600 mb-4">Stile di combattimento libero cinese derivato dal Wushu e Kung Fu, focalizzato su pugni e calci.</p>
+                        <a href="#" class="text-red-600 hover:text-red-800 font-medium">Scopri di più <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Fit Box -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md class-card transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://www.smallvilletrento.com/wp-content/uploads/2022/06/fitboxe-1-e1656522759386.jpg');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Fusion</span>
+                            <span class="ml-2 text-gray-500 text-sm"><i class="fas fa-clock mr-1"></i> 45 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Fit Box</h3>
+                        <p class="text-gray-600 mb-4">Fusione di tecniche di arti marziali e attività aerobica per un allenamento completo.</p>
+                        <a href="https://www.lafenicesportebenessere.it/" class="text-red-600 hover:text-red-800 font-medium">Scopri di più <i class="fas fa-arrow-right ml-1"></i></a> 
+                    </div>
+                </div>
+
+                <!-- Zumba -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md class-card transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Danza</span>
+                            <span class="ml-2 text-gray-500 text-sm"><i class="fas fa-clock mr-1"></i> 60 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Zumba</h3>
+                        <p class="text-gray-600 mb-4">Lezione di fitness basata sulla danza con ritmi latini, adatta a tutti i livelli.</p>
+                        <a href="#" class="text-red-600 hover:text-red-800 font-medium">Scopri di più <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Strong -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md class-card transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://www.lafenicesportebenessere.it/images/Corsi/strong-by-zumba-1517044279.png');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Cardio</span>
+                            <span class="ml-2 text-gray-500 text-sm"><i class="fas fa-clock mr-1"></i> 45 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Strong</h3>
+                        <p class="text-gray-600 mb-4">Allenamento cardio sincronizzato con la musica, che migliora resistenza e umore.</p>
+                        <a href="#" class="text-red-600 hover:text-red-800 font-medium">Scopri di più <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Pilates -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md class-card transition duration-300">
+                    <div class="h-48  bg-cover bg-center" style="background-image: url('https://floky.com/cdn/shop/articles/00_Dynamic_Pilates.jpg?v=1614766074&width=1000');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">Flessibilità</span>
+                            <span class="ml-2 text-gray-500 text-sm"><i class="fas fa-clock mr-1"></i> 60 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pilates</h3>
+                        <p class="text-gray-600 mb-4">Focalizzato sul miglioramento delle capacità motorie, circolazione ed equilibrio muscolare.</p>
+                        <a href="#" class="text-red-600 hover:text-red-800 font-medium">Scopri di più <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Pump -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md class-card transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://www.abcallenamento.it/wp-content/uploads/2021/10/muscular-arm-and-torso.jpg');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Forza</span>
+                            <span class="ml-2 text-gray-500 text-sm"><i class="fas fa-clock mr-1"></i> 45 min</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Pump</h3>
+                        <p class="text-gray-600 mb-4">Allenamento di forza con pesi leggeri e alte ripetizioni per tonificare i muscoli.</p>
+                        <a href="#" class="text-red-600 hover:text-red-800 font-medium">Scopri di più <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#book" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-medium transition duration-300 inline-block">Vedi Tutti i Corsi</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Orari -->
+    <section id="schedule" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Orari dei Corsi</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Il nostro programma settimanale per tutti i corsi di fitness e arti marziali.</p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Giorno</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Orari di Apertura</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Corsi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="schedule-day hover:bg-gray-50 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">Lunedì</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">08:00–22:30</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Sanda, Pilates, Pump</div>
+                                </td>
+                            </tr>
+                            <tr class="schedule-day hover:bg-gray-50 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">Martedì</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">09:00–22:30</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Fit Box, Zumba</div>
+                                </td>
+                            </tr>
+                            <tr class="schedule-day hover:bg-gray-50 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">Mercoledì</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">08:00–22:30</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Strong, Sanda, Fit Box</div>
+                                </td>
+                            </tr>
+                            <tr class="schedule-day hover:bg-gray-50 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">Giovedì</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">09:00–22:30</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Pilates, Pump, Zumba</div>
+                                </td>
+                            </tr>
+                            <tr class="schedule-day hover:bg-gray-50 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">Venerdì</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">09:00–22:30</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Fit Box, Strong</div>
+                                </td>
+                            </tr>
+                            <tr class="schedule-day hover:bg-gray-50 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">Sabato</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">09:00–14:00</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">Sanda, Zumba</div>
+                                </td>
+                            </tr>
+                            <tr class="schedule-day hover:bg-gray-50 transition duration-150">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="text-sm font-medium text-gray-900">Domenica</div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">Chiuso</div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-500">-</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="#" class="inline-flex items-center text-red-600 hover:text-red-800 font-medium">
+                        <i class="fas fa-download mr-2"></i> Scarica l'Orario Completo (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Eventi -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Prossimi Eventi</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Partecipa ai nostri entusiasmanti tornei ed eventi speciali.</p>
+            </div>
+
+    <!-- Sezione Dove Siamo -->
+    <section id="location" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Dove Siamo</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Vienici a trovare nella nostra moderna struttura a Napoli.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4">Informazioni di Contatto</h3>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-red-600">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-700">
+                                <p>Via Parroco Giustino Russolillo, 86</p>
+                                <p>80126 Napoli NA, Italia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-red-600">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-700">
+                                <p>+39 081 726 9007</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-red-600">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-700">
+                                <p>info@lafenicesportebenessere.it</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-red-600">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-700">
+                                <p>Parcheggio gratuito disponibile in loco (500 m²)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-red-600">
+                                <i class="fas fa-wheelchair"></i>
+                            </div>
+                            <div class="ml-3 text-base text-gray-700">
+                                <p>Ingresso e parcheggio accessibili ai disabili</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-2">Seguici</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-red-600">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-red-600">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-red-600">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-96 rounded-xl overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.360198129126!2d14.19326731541481!3d40.85411197931506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0868c2c7f8a5%3A0x7a3b9b3e3b3b3b3b!2sLa%20Fenice%20Sport%20e%20Benessere!5e0!3m2!1sen!2sit!4v1620000000000!5m2!1sen!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Testimonianze -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Cosa Dicono i Nostri Soci</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ascolta dalla nostra comunità le loro esperienze.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria">
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-sm font-medium text-gray-900">Maria R.</div>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-600">
+                        <p>"Gli istruttori di La Fenice sono eccezionali. Frequento i corsi di Zumba da 6 mesi e ho visto risultati incredibili nel mio fitness e nei miei livelli di energia."</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/54.jpg" alt="Luca">
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-sm font-medium text-gray-900">Luca B.</div>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-600">
+                        <p>"I corsi di Sanda hanno trasformato le mie abilità nelle arti marziali. Gli istruttori sono competenti e la struttura è sempre pulita e ben mantenuta."</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Giulia">
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-sm font-medium text-gray-900">Giulia S.</div>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-600">
+                        <p>"Adoro la varietà di corsi offerti. Dal Pilates allo Strong, c'è qualcosa per tutti. La comunità qui è accogliente e solidale."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Prenotazione -->
+    <section id="book" class="py-16 bg-red-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-4">Pronto a Iniziare il Tuo Percorso Fitness?</h2>
+                    <p class="text-red-100 max-w-lg">Iscriviti oggi a La Fenice Sport e Benessere e sperimenta un allenamento professionale in un ambiente accogliente.</p>
+                </div>
+                <div class="md:w-1/2 text-center md:text-right">
+                    <a href="https://www.lafenicesportebenessere.it/" class="bg-white hover:bg-gray-100 text-red-600 px-8 py-3 rounded-md font-medium transition duration-300 inline-block">
+                        Prenota il Tuo Corso Ora <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-fire text-red-600 mr-2"></i> La Fenice
+                    </h3>
+                    <p class="text-gray-400">Centro professionale di fitness e benessere a Napoli che offre arti marziali, corsi di gruppo e allenamenti personalizzati.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Link Rapidi</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-150">Home</a></li>
+                        <li><a href="#classes" class="text-gray-400 hover:text-white transition duration-150">Corsi</a></li>
+                        <li><a href="#schedule" class="text-gray-400 hover:text-white transition duration-150">Orari</a></li>
+                        <li><a href="#location" class="text-gray-400 hover:text-white transition duration-150">Dove siamo</a></li>
+                        <li><a href="#book" class="text-gray-400 hover:text-white transition duration-150">Prenota ora</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contattaci</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-red-600 mt-1 mr-2"></i>
+                            <span>Via Parroco Giustino Russolillo, 86, 80126 Napoli NA, Italia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-red-600 mr-2"></i>
+                            <span>+39 081 726 9007</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-red-600 mr-2"></i>
+                            <span>info@lafenicesportebenessere.it</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Iscriviti alla nostra newsletter per aggiornamenti su corsi ed eventi.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="La tua email" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 La Fenice Sport e Benessere. Tutti i diritti riservati.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pulsante WhatsApp Fluttuante -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/390817269007" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // JavaScript semplice per lo scrolling fluido
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
